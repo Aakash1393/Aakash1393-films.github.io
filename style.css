@@ -25,7 +25,7 @@
 .dummyrating{
 
 	margin-left:1002px;
-	margin-top:-440px;
+	margin-top:-430px;
 }
 
 .dummyvotes{
@@ -37,7 +37,7 @@
 .imdbrating{
 
 	margin-left:962px;
-	margin-top:-555px;	
+	margin-top:-510px;	
 
 }
 
@@ -56,6 +56,9 @@ font-size:10px;
 	margin-left: 95px;
 }
 
+.voting{
+	margin-left: 35px;
+}
 
 @media screen and (max-width:1466px)
 {
@@ -572,6 +575,24 @@ font-size:10px;
 	}
 }
 
+@media screen and (max-width:536px)
+{
+
+	.dummy{
+		 margin-left:25px;
+	}
+
+	.dummyrating{
+		 margin-left:310px;
+	}
+
+	.dummyvotes{
+		 margin-left:395px;
+	}
+}
+
+
+
 @media screen and (max-width:528px)
 {
 
@@ -873,6 +894,23 @@ font-size:10px;
 	}
 }
 
+
+@media screen and (max-width:348px)
+{
+
+	.dummy{
+		 margin-left:0px;
+		 width:270px;
+	}
+
+	.dummyrating{
+		 margin-left:310px;
+	}
+
+	.dummyvotes{
+		 margin-left:395px;
+	}
+}
 
 
 

@@ -40,7 +40,7 @@ $("#search").on("click",function()
                 dataType: 'json',
                 async: true, 
                 
-                  url:'https://www.omdbapi.com/?t='+searchTerm+'&y'+yearTerm+'&apikey=7d78520b',
+                  url:'http://www.omdbapi.com/?t='+searchTerm+'&y'+yearTerm+'&apikey=7d78520b',
                   success:function(data)
                   {
 
@@ -53,25 +53,25 @@ $("#search").on("click",function()
                          {
                            // $("#image").append("<img src='dummy.png' alt='no image found'>");
                           $("#image").attr('src','dummy.png').addClass("dummy");
-                          $(".rating").append("Imdb Rating"+":"+" "+"  "+data.imdbRating).addClass("dummyrating");
-                          $(".votes").append(data.imdbVotes).addClass("dummyvotes");
-                          $("#name").append(data.Title).addClass("dummytext");
+                          // $(".rating").append("Imdb Rating"+":"+" "+"  "+data.imdbRating).addClass("dummyrating");
+                          // $(".votes").append(data.imdbVotes).addClass("dummyvotes");
+                          // $("#name").append(data.Title).addClass("dummytext");
                          } 
 
                          else{
 
                            $("#image").attr('src',data.Poster).addClass("poster");
-                           $(".rating").append("Imdb Rating"+":"+" "+"  "+data.imdbRating).addClass("imdbrating");
-                           $(".votes").append(data.imdbVotes).addClass("imdbvotes");
-                           $("#name").append(data.Title);
+                           
+                          
                          }
                         // var value=actors.css({"font-weight": "bold"});
                          
-                        $(".year").append(space+"("+data.Year+")"); 
+                        
                         $("#rated").append(data.Rated+space).css({"font-size":"10px","margin-left":"-900px"});
                         $(".time").append(data.Runtime+space).css({"margin-left":"590px"});  
                         $(".genre").append(data.Genre+space);
-                        // $("#image").attr('src',data.Poster).addClass("poster"); 
+                        $("#name").append(data.Title);
+                        $(".year").append(space+"("+data.Year+")"); 
                         $(".released").append(data.Released).css({"margin-left":"-5px"}); 
                         $("#plot").append(data.Plot); 
                         $("#stars").append(actors+":"+data.Actors);
@@ -80,7 +80,8 @@ $("#search").on("click",function()
                         $(".metascore").append("Metascore"+":"+data.Metascore);  
                         $(".awards").append("Awards"+":"+data.Awards);
                         $(".production").append("Production"+":"+data.Production);
-                        
+                        $(".rating").append("Imdb Rating"+":"+" "+"  "+data.imdbRating);
+                        $(".votes").append("Imdb Votes"+":"+" "+"  "+data.imdbVotes).addClass("voting");
                         $(".boxOffice").append("Box Office"+":"+data.BoxOffice);
                         $(".country").append("Country"+":"+data.Country);
                         $(".language").append("Language"+":"+data.Language);
@@ -115,7 +116,7 @@ $("#search").on("click",function()
                           dataType: 'json',
                           async: true, 
                            
-                            url:'https://www.omdbapi.com/?i='+searchTerm+'&y'+yearTerm+'&apikey=7d78520b',
+                            url:'http://www.omdbapi.com/?i='+searchTerm+'&y'+yearTerm+'&apikey=7d78520b',
                             success:function(data)
                             {
                               console.log(data);
